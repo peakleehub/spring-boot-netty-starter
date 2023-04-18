@@ -1,0 +1,211 @@
+{
+  "properties": [
+    {
+      "name": "socket.port",
+      "type": "java.lang.Integer",
+      "defaultValue": 7080,
+      "description": "The port number that the server needs to listen to or connect to the server."
+  },
+    {
+      "name": "socket.application-type",
+      "type": "site.peaklee.framework.enums.AppType",
+      "defaultValue": "SERVER",
+      "description": "Is the application type that needs to be started client or server."
+    },
+    {
+      "name": "socket.client.host",
+      "type": "java.lang.String",
+      "defaultValue": "localhost",
+      "description": "Address IP, domain name, etc. connected to the server."
+    },
+    {
+      "name": "socket.client.retry-count",
+      "type": "java.lang.Integer",
+      "defaultValue": -1,
+      "description": "Maximum number of automatic reconnection, -1 represents infinite reconnection."
+    },
+    {
+      "name": "socket.client.auto-retry",
+      "type": "java.lang.Boolean",
+      "defaultValue": true,
+      "description": "Automatically reconnect or not."
+    },
+    {
+      "name": "socket.client.thread-count",
+      "type": "java.lang.Integer",
+      "defaultValue": 10,
+      "description": "Number of working threads on the client."
+    },
+    {
+      "name": "socket.client.timeOut",
+      "type": "java.lang.Integer",
+      "defaultValue": 15000,
+      "description": "The timeout time of the connected server, in milliseconds."
+    },
+    {
+      "name": "socket.server.socket-type",
+      "type": "site.peaklee.framework.enums.SocketType",
+      "defaultValue": "Socket",
+      "description": "Select the enabled socket type."
+    },
+    {
+      "name": "socket.server.boss-threads",
+      "type": "java.lang.Integer",
+      "defaultValue": 1,
+      "description": "Configuring the number of boss threads for netty."
+    },
+    {
+      "name": "socket.server.work-threads",
+      "type": "java.lang.Integer",
+      "defaultValue": 10,
+      "description": "Configuring the number of work threads for netty."
+    },
+    {
+      "name": "socket.server.enable-idle",
+      "type": "java.lang.Boolean",
+      "defaultValue": true,
+      "description": "Enable heartbeat."
+    },
+    {
+      "name": "socket.server.idle-time",
+      "type": "java.lang.Integer",
+      "defaultValue": 60,
+      "description": "all idle heartbeat."
+    },
+    {
+      "name": "socket.server.reader-idle-time",
+      "type": "java.lang.Integer",
+      "defaultValue": 60,
+      "description": "read idle heartbeat."
+    },
+    {
+      "name": "socket.server.writer-idle-time",
+      "type": "java.lang.Integer",
+      "defaultValue": 60,
+      "description": "write idle heartbeat."
+    },
+    {
+      "name": "socket.server.idle-unit",
+      "type": "java.util.concurrent.TimeUnit",
+      "defaultValue": "MINUTES",
+      "description": "heartbeat idle time unit."
+    },
+    {
+      "name": "socket.server.websocket.web-socket-path",
+      "type": "java.lang.String",
+      "defaultValue": "/",
+      "description": "This attribute is valid if the enabled socket type is websocket."
+    },
+    {
+      "name": "socket.server.websocket.max-content-length",
+      "type": "java.lang.Integer",
+      "defaultValue": 65535,
+      "description": "set the maximum packet length for websocket."
+    },
+    {
+      "name": "socket.server.websocket.sub-protocols",
+      "type": "java.lang.String",
+      "defaultValue": null,
+      "description": "set the sub protocol of websocket."
+    },
+    {
+      "name": "socket.server.websocket.allow-extensions",
+      "type": "java.lang.Boolean",
+      "defaultValue": true,
+      "description": "set whether websocket ignores extensions."
+    },
+    {
+      "name": "socket.server.websocket.max-frame-size",
+      "type": "java.lang.Integer",
+      "defaultValue": 10240,
+      "description": "Set the maximum number of frames for websocket."
+    },
+    {
+      "name": "socket.server.websocket.enable-compress",
+      "type": "java.lang.Boolean",
+      "defaultValue": true,
+      "description": "whether to enable data compression."
+    },
+    {
+      "name": "socket.server.websocket.enable-ssl",
+      "type": "java.lang.Boolean",
+      "defaultValue": false,
+      "description": "Enable SSL connection."
+    },
+    {
+      "name": "socket.server.websocket.socket-ssl.cert-path",
+      "type": "java.lang.String",
+      "description": "The path address of the ssl certificate."
+    },
+    {
+      "name": "socket.server.websocket.socket-ssl.password",
+      "type": "java.lang.String",
+      "description": "The password for the ssl certificate."
+    },
+    {
+      "name": "socket.server.websocket.socket-ssl.ssl-type",
+      "type": "site.peaklee.framework.enums.SSLType",
+      "defaultValue": "PKCS12",
+      "description": "type of ssl certificate."
+    },
+    {
+      "name": "socket.server.socket-backlog",
+      "type": "java.lang.Integer",
+      "defaultValue": 128,
+      "description": "configuration parameters for netty: SO_BACKLOG."
+    },
+    {
+      "name": "socket.server.socket-reuseaddr",
+      "type": "java.lang.Boolean",
+      "defaultValue": false,
+      "description": "configuration parameters for netty: SO_REUSEADDR."
+    },
+    {
+      "name": "socket.server.socket-keepalive",
+      "type": "java.lang.Boolean",
+      "defaultValue": false,
+      "description": "configuration parameters for netty: SO_KEEPALIVE."
+    },
+    {
+      "name": "socket.server.tcp-node-lay",
+      "type": "java.lang.Boolean",
+      "defaultValue": true,
+      "description": "configuration parameters for netty: TCP_NODELAY."
+    },
+    {
+      "name": "socket.server.allow-half-closure",
+      "type": "java.lang.Boolean",
+      "defaultValue": false,
+      "description": "configuration parameters for netty: ALLOW_HALF_CLOSURE."
+    },
+    {
+      "name": "socket.server.socket-linger",
+      "type": "java.lang.Integer",
+      "defaultValue": -1,
+      "description": "configuration parameters for netty: SO_LINGER."
+    },
+    {
+      "name": "socket.server.auto-register-session",
+      "type": "java.lang.Boolean",
+      "defaultValue": true,
+      "description": "Automatically register session to session manager."
+    },
+    {
+      "name": "socket.support-protobuf",
+      "type": "site.peaklee.framework.enums.HandlerType",
+      "defaultValue": "STRING",
+      "description": "Protocol type for socket data parsing."
+    },
+    {
+      "name": "socket.enable-log",
+      "type": "java.lang.Boolean",
+      "defaultValue": false,
+      "description": "whether to enable netty s processing log."
+    },
+    {
+      "name": "socket.log-level",
+      "type": "io.netty.handler.logging.LogLevel",
+      "defaultValue": "INFO",
+      "description": "enable the level of netty logging."
+    }
+] }

@@ -1,0 +1,4 @@
+socket:
+  port: 7080
+  support-protobuf: protobuf
+
